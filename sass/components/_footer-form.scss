@@ -1,0 +1,35 @@
+.footer__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__input-wrap {
+  display: flex;
+}
+
+.button__icon {
+  margin-left: 10px;
+}
+
+.footer__input {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-right: 12px;
+  min-width: 358px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: inherit;
+  color: $footer-color;
+  background-color: inherit;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  &:focus {
+    border: 1px solid $footer-color;
+    outline-width: 0px;
+  }
+}

@@ -1,0 +1,26 @@
+.socials {
+  display: flex;
+  padding-left: 32px;
+  padding-right: 32px;
+  justify-content: space-between;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  fill: $icon-color;
+
+  transition: background-color 250ms $timing-function,
+    fill 250ms $timing-function;
+
+  &:hover,
+  &:focus {
+    background-color: #2196f3;
+    fill: $footer-color;
+  }
+}
