@@ -1,8 +1,10 @@
 .socials {
   display: flex;
-  padding-left: 32px;
-  padding-right: 32px;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .socials__link {

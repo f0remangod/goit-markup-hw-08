@@ -1,13 +1,12 @@
 .clients__list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .clients__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
 
   border: 1px solid $icon-color;
@@ -20,5 +19,45 @@
   &:focus {
     fill: $accent-color;
     border-color: $accent-color;
+  }
+}
+
+.clients__item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  @media screen and (max-width: 479px) {
+    width: calc((100% - 30px) / 2);
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+    &:nth-child(n + 5) {
+      margin-bottom: 0px;
+    }
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 210px;
+    &:nth-child(2n) {
+      margin-right: 0px;
+    }
+    &:nth-child(n + 5) {
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 226px;
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+    &:nth-child(n + 4) {
+      margin-bottom: 0px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+    margin-bottom: 0;
+    &:last-child {
+      margin-right: 0px;
+    }
   }
 }

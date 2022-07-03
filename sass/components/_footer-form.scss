@@ -5,6 +5,10 @@
 
 .footer__input-wrap {
   display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .button__icon {
@@ -12,11 +16,23 @@
 }
 
 .footer__input {
-  display: flex;
-  align-items: center;
-  padding-left: 16px;
-  margin-right: 12px;
-  min-width: 358px;
+  padding: 0px 16px;
+  margin: 0px 0px 20px 0px;
+
+  // @media screen and (min-width: 450px) {
+  //   // width: 450px;
+  // }
+  @media screen and (min-width: 767px) {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin: 0px 12px 0px 0px;
+    width: 358px;
+  }
+
+  height: 50px;
 
   font-size: 16px;
   line-height: 1.25;

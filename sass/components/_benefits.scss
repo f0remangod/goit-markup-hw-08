@@ -2,12 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
-  height: 120px;
   margin-bottom: 30px;
-
+  // width: 450px;
+  height: 120px;
   background-color: $filter-background;
   border-radius: 4px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .benefits__title {
@@ -25,12 +33,37 @@
 }
 
 .benefits__list {
-  display: flex;
+  display: block;
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .benefits__item {
-  width: 270px;
-  &:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (max-width: 479px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 354px;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
