@@ -62,36 +62,26 @@ ul {
 }
 
 .logo {
-  display: block;
-  color: #000000;
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.17;
+  color: #000000;
 }
 @media screen and (max-width: 767px) {
   .logo {
     padding: 16px 0px;
-    margin-right: auto;
   }
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .logo {
     padding: 26px 0px;
-    margin-right: 88px;
   }
 }
 @media screen and (min-width: 1200px) {
   .logo {
     padding: 24px 0px 25px 0px;
-    margin-right: 93px;
-    font-size: 26px;
-    line-height: 1.19;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .logo {
     font-size: 26px;
     line-height: 1.19;
   }
@@ -103,69 +93,132 @@ ul {
 
 .header__menu-link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  line-height: 1.18;
+  font-size: 40px;
   color: #212121;
   text-decoration: none;
   font-weight: 500;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .header__menu-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    line-height: 1.14;
+    font-size: 14px;
+  }
+  .header__menu-link--current::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
 }
 .header__menu-link--current, .header__menu-link:hover, .header__menu-link:focus {
   color: #2196f3;
 }
-.header__menu-link--current::after {
-  position: absolute;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 4px;
-  width: 100%;
-  background-color: #2196f3;
-  border-radius: 2px;
-}
 
 .header__contacts-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   text-decoration: none;
   color: #757575;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .header__contacts-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: 1.14;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .header__contacts-link:hover, .header__contacts-link:focus {
   color: #2196f3;
 }
 
-.header__menu-item {
-  position: relative;
+@media screen and (min-width: 768px) {
+  .header__menu-item {
+    position: relative;
+  }
 }
 .header__menu-item:not(:last-child) {
-  margin-right: 50px;
+  margin: 0px 0px 32px 0px;
+}
+@media screen and (min-width: 768px) {
+  .header__menu-item:not(:last-child) {
+    margin: 0px 50px 0px 0px;
+  }
 }
 
 .header {
-  height: 80px;
+  position: relative;
+  height: 60px;
   border-bottom: 1px solid #ececec;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
 
-.header__menu-list,
-.header__contacts-list,
-.header__nav {
+.header__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header__menu-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0px 84px 0px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__menu-list {
+    margin: 0px 305px 0px 0px;
+  }
+}
+
+.header__contacts-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .header__container {
@@ -175,15 +228,94 @@ ul {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header__contacts-item:nth-child(1) {
-  margin-right: 50px;
+  margin: 0px 0px 32px 0px;
+}
+@media screen and (min-width: 768px) {
+  .header__contacts-item:nth-child(1) {
+    margin: 0px 0px 10px 0px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-item:nth-child(1) {
+    margin: 0px 30px 0px 0px;
+  }
 }
 
-.header__contacts-icon {
-  fill: currentColor;
-  margin-right: 10px;
+@media screen and (max-width: 767px) {
+  .header__contacts-icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__contacts-icon {
+    fill: currentColor;
+    margin-right: 8px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contacts-icon {
+    fill: currentColor;
+    margin-right: 10px;
+  }
+}
+
+.header__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
+}
+
+.header__button .icon-cross {
+  display: none;
+}
+
+.header__button.is-open .icon-cross {
+  display: block;
+}
+
+.header__button.is-open .icon-menu {
+  display: none;
+}
+
+.header__menu {
+  background-color: salmon;
+}
+@media screen and (max-width: 767px) {
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 48px 0px 48px 40px;
+  }
+  .header__menu.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .button {

@@ -22,42 +22,68 @@
     <!-- шапка -->
     <header class="header">
       <div class="container header__container">
-        <nav class="header__nav">
-          <a class="logo" href="./index.html"
-            ><span class="logo__accent">Web</span>Studio</a
+        <a class="logo" href="./index.html"
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <button
+          class="header__button is-open"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
           >
-          <ul class="header__menu-list">
-            <li class="header__menu-item">
-              <a
-                class="header__menu-link header__menu-link--current"
-                href="./index.html"
-                >Студия</a
+            <use
+              class="icon-cross"
+              href="./images/sprite.svg#icon-mobile-close"
+            ></use>
+            <use
+              class="icon-menu"
+              href="./images/sprite.svg#icon-mobile-burger"
+            ></use>
+          </svg>
+        </button>
+        <div class="header__menu is-open" id="menu-container" data-menu>
+          <nav class="header__nav">
+            <ul class="header__menu-list">
+              <li class="header__menu-item">
+                <a
+                  class="header__menu-link header__menu-link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__contacts-list">
+            <li class="header__contacts-item">
+              <a class="header__contacts-link" href="mailto:info@devstudio.com">
+                <svg class="header__contacts-icon" width="16px" height="12px">
+                  <use href="./images/sprite.svg#icon-mailto"></use></svg
+                >info@devstudio.com</a
               >
             </li>
-            <li class="header__menu-item">
-              <a class="header__menu-link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="header__menu-item">
-              <a class="header__menu-link" href="#">Контакты</a>
+            <li class="header__contacts-item">
+              <a class="header__contacts-link" href="tel:+380961111111">
+                <svg class="header__contacts-icon" width="10px" height="16px">
+                  <use href="./images/sprite.svg#icon-tel"></use></svg
+                >+38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header__contacts-list">
-          <li class="header__contacts-item">
-            <a class="header__contacts-link" href="mailto:info@devstudio.com">
-              <svg class="header__contacts-icon" width="16px" height="12px">
-                <use href="./images/sprite.svg#icon-mailto"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="header__contacts-item">
-            <a class="header__contacts-link" href="tel:+380961111111">
-              <svg class="header__contacts-icon" width="10px" height="16px">
-                <use href="./images/sprite.svg#icon-tel"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
     <!-- main -->
