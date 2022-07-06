@@ -184,37 +184,52 @@
           <ul class="activities__list">
             <li class="activities__item">
               <div class="activities__overlay">
-                <img
-                  class="activities__image"
-                  src="./images/box1.jpg"
-                  alt="Реализация алгоритма на компьютере"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box1@1x.jpg 1x, ./images/box1@2x.jpg 2x"
+                  />
+                  <img
+                    class="activities__image"
+                    src="./images/box1@1x.jpg"
+                    alt="Реализация алгоритма на компьютере"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="activities__title">Десктопные приложения</p>
               </div>
             </li>
             <li class="activities__item">
               <div class="activities__overlay">
-                <img
-                  class="activities__image"
-                  src="./images/box2.jpg"
-                  alt="Реализация алгоритма на компьютере"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box2@1x.jpg 1x, ./images/box2@2x.jpg 2x"
+                  />
+                  <img
+                    class="activities__image"
+                    src="./images/box2@1x.jpg"
+                    alt="Реализация алгоритма на компьютере"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="activities__title">Мобильные приложения</p>
               </div>
             </li>
             <li class="activities__item">
               <div class="activities__overlay">
-                <img
-                  class="activities__image"
-                  src="./images/box3.jpg"
-                  alt="Реализация алгоритма на компьютере"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/box3@1x.jpg 1x, ./images/box3@2x.jpg 2x"
+                  />
+                  <img
+                    class="activities__image"
+                    src="./images/box3@1x.jpg"
+                    alt="Реализация алгоритма на компьютере"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="activities__title">Дизайнерские решения</p>
               </div>
             </li>
@@ -227,16 +242,34 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/img1.jpg"
-                alt="Фото Игоря Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team1/img1-mobile@1x.jpg 1x,
+                    ./images/team/team1/img1-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team/team1/img1-desktop@1x.jpg 1x,
+                    ./images/team/team1/img1-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <source
+                  srcset="
+                    ./images/team/team1/img1-tablet@1x.jpg 1x,
+                    ./images/team/team1/img1-tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+
+                <img
+                  class="team__image"
+                  src="./images/team/team1/img1-desktop@1x.jpg"
+                  alt="Фото Игоря Демьяненко"
+              /></picture>
               <div class="team__wrapper">
                 <h3 class="team__name">Игорь Демьяненко</h3>
-                <p class="team__poition">Product Designer</p>
+                <p class="team__position">Product Designer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a class="socials__link" href="#">
@@ -264,16 +297,14 @@
                   </li>
                   <li class="socials__item">
                     <a class="socials__link" href="#">
-                      <div class="ellipse">
-                        <svg
-                          class="socials__icon"
-                          width="20px"
-                          height="20px"
-                          aria-label="Facebook"
-                        >
-                          <use href="./images/sprite.svg#icon-facebook"></use>
-                        </svg>
-                      </div>
+                      <svg
+                        class="socials__icon"
+                        width="20px"
+                        height="20px"
+                        aria-label="Facebook"
+                      >
+                        <use href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials__item">
@@ -292,16 +323,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/img2.jpg"
-                alt="Фото Ольги Репиной"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team2/img2-mobile@1x.jpg 1x,
+                    ./images/team/team2/img2-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team/team2/img2-desktop@1x.jpg 1x,
+                    ./images/team/team2/img2-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <source
+                  srcset="
+                    ./images/team/team2/img2-tablet@1x.jpg 1x,
+                    ./images/team/team2/img2-tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+
+                <img
+                  class="team__image"
+                  src="./images/team/team2/img2-desktop@1x.jpg"
+                  alt="Фото Ольги Репиной"
+              /></picture>
               <div class="team__wrapper">
                 <h3 class="team__name">Ольга Репина</h3>
-                <p class="team__poition">Frontend Developer</p>
+                <p class="team__position">Frontend Developer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a class="socials__link" href="#">
@@ -329,16 +378,14 @@
                   </li>
                   <li class="socials__item">
                     <a class="socials__link" href="#">
-                      <div class="ellipse">
-                        <svg
-                          class="socials__icon"
-                          width="20px"
-                          height="20px"
-                          aria-label="Facebook"
-                        >
-                          <use href="./images/sprite.svg#icon-facebook"></use>
-                        </svg>
-                      </div>
+                      <svg
+                        class="socials__icon"
+                        width="20px"
+                        height="20px"
+                        aria-label="Facebook"
+                      >
+                        <use href="./images/sprite.svg#icon-facebook"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials__item">
@@ -357,16 +404,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/img3.jpg"
-                alt="Фото Николая Тарасова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team3/img3-mobile@1x.jpg 1x,
+                    ./images/team/team3/img3-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team/team3/img3-desktop@1x.jpg 1x,
+                    ./images/team/team3/img3-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <source
+                  srcset="
+                    ./images/team/team3/img3-tablet@1x.jpg 1x,
+                    ./images/team/team3/img3-tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+
+                <img
+                  class="team__image"
+                  src="./images/team/team3/img3-desktop@1x.jpg"
+                  alt="Фото Николая Тарасова"
+              /></picture>
               <div class="team__wrapper">
                 <h3 class="team__name">Николай Тарасов</h3>
-                <p class="team__poition">Marketing</p>
+                <p class="team__position">Marketing</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a class="socials__link" href="#">
@@ -382,16 +447,14 @@
                   </li>
                   <li class="socials__item">
                     <a class="socials__link" href="#">
-                      <div class="ellipse">
-                        <svg
-                          class="socials__icon"
-                          width="20px"
-                          height="20px"
-                          aria-label="Twitter"
-                        >
-                          <use href="./images/sprite.svg#icon-twitter"></use>
-                        </svg>
-                      </div>
+                      <svg
+                        class="socials__icon"
+                        width="20px"
+                        height="20px"
+                        aria-label="Twitter"
+                      >
+                        <use href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials__item">
@@ -422,16 +485,34 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                class="team__image"
-                src="./images/img4.jpg"
-                alt="Фото Михаила Ермакова"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/team4/img4-mobile@1x.jpg 1x,
+                    ./images/team/team4/img4-mobile@2x.jpg 2x
+                  "
+                  media="(max-width:767px)" />
+                <source
+                  srcset="
+                    ./images/team/team4/img4-desktop@1x.jpg 1x,
+                    ./images/team/team4/img4-desktop@2x.jpg 2x
+                  "
+                  media="(min-width:1200px)" />
+                <source
+                  srcset="
+                    ./images/team/team4/img4-tablet@1x.jpg 1x,
+                    ./images/team/team4/img4-tablet@2x.jpg 2x
+                  "
+                  media="(min-width:768px)" />
+
+                <img
+                  class="team__image"
+                  src="./images/team/team4/img4-desktop@1x.jpg"
+                  alt="Фото Михаила Ермакова"
+              /></picture>
               <div class="team__wrapper">
                 <h3 class="team__name">Михаил Ермаков</h3>
-                <p class="team__poition">UI Designer</p>
+                <p class="team__position">UI Designer</p>
                 <ul class="socials">
                   <li class="socials__item">
                     <a class="socials__link" href="#">
@@ -447,16 +528,14 @@
                   </li>
                   <li class="socials__item">
                     <a class="socials__link" href="#">
-                      <div class="ellipse">
-                        <svg
-                          class="socials__icon"
-                          width="20px"
-                          height="20px"
-                          aria-label="Twitter"
-                        >
-                          <use href="./images/sprite.svg#icon-twitter"></use>
-                        </svg>
-                      </div>
+                      <svg
+                        class="socials__icon"
+                        width="20px"
+                        height="20px"
+                        aria-label="Twitter"
+                      >
+                        <use href="./images/sprite.svg#icon-twitter"></use>
+                      </svg>
                     </a>
                   </li>
                   <li class="socials__item">
@@ -473,16 +552,14 @@
                   </li>
                   <li class="socials__item">
                     <a class="socials__link" href="#">
-                      <div class="ellipse">
-                        <svg
-                          class="socials__icon"
-                          width="20px"
-                          height="20px"
-                          aria-label="LinkedIn"
-                        >
-                          <use href="./images/sprite.svg#icon-linkedin"></use>
-                        </svg>
-                      </div>
+                      <svg
+                        class="socials__icon"
+                        width="20px"
+                        height="20px"
+                        aria-label="LinkedIn"
+                      >
+                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                      </svg>
                     </a>
                   </li>
                 </ul>

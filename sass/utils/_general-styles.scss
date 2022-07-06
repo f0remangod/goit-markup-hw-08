@@ -4,6 +4,12 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
   background-color: $footer-color;
+  &.modal-open {
+    overflow: hidden;
+  }
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
 h1,

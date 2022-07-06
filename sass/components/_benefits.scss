@@ -3,19 +3,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
-  // width: 450px;
   height: 120px;
   background-color: $filter-background;
   border-radius: 4px;
-  @media screen and (min-width: 480px) {
-    width: 450px;
-  }
-  @media screen and (min-width: 768px) {
-    width: 354px;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 270px;
-  }
 }
 
 .benefits__title {
@@ -44,7 +34,7 @@
 }
 
 .benefits__item {
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 30px;
     }

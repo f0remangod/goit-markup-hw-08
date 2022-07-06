@@ -13,11 +13,11 @@
 
 .team__image {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
-.team__poition {
+.team__position {
   margin-bottom: 16px;
 
   color: $main-color;
@@ -32,7 +32,6 @@
   }
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
-    justify-content: space-between;
   }
 }
 
@@ -60,6 +59,15 @@
     }
     &:nth-child(-n + 2) {
       margin-bottom: 30px;
+    }
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    &:nth-child(-n + 3) {
+      margin-right: 30px;
+    }
+    &:nth-child(-n + 2) {
+      margin-bottom: 0px;
     }
     width: calc((100% - 30px) / 2);
   }
